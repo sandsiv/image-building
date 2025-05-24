@@ -60,3 +60,13 @@ jobs:
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
           
+  SecondJob:
+    runs-on: ubuntu-latest
+    environment:
+      name: 'prod'
+
+    steps:
+      - name: "First Step from SecondJob"
+        run: |
+          echo "First Step from SecondJob"
+          if: ${{ github.event_name == 'workflow_dispatch' }}
