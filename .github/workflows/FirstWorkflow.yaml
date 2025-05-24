@@ -69,4 +69,4 @@ jobs:
       - name: "First Step from SecondJob"
         run: |
           echo "First Step from SecondJob"
-          if: ${{ github.event_name == 'workflow_dispatch' }}
+        if: ${{ github.event_name == 'workflow_dispatch' }}
