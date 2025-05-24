@@ -69,4 +69,8 @@ jobs:
       - name: "First Step from SecondJob"
         run: |
           echo "First Step from SecondJob"
-        if: ${{ github.event_name == 'workflow_dispatch' }}
+        if: ${{ inputs.environment == 'prod' }}
+      - name: "Second Step from SecondJob"
+        run: |
+          echo "First Step from SecondJob"
+        if: ${{ inputs.environment == 'staging' }}
