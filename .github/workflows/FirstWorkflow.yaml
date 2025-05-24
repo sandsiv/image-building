@@ -32,6 +32,9 @@ on:
 jobs:
   FirstJob:
     runs-on: ubuntu-latest
+    environment:
+      name: 'staging'
+
     steps:
       - run: |
           echo "Homedrive: ${{ inputs.homedrive }}"
