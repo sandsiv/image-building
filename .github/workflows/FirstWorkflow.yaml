@@ -53,6 +53,8 @@ jobs:
         name: Payload
         working-directory: /tmp
 
+      - name: Write summary
+        run: echo '### Summary message! :rocket:' >> $GITHUB_STEP_SUMMARY
       - name: List files in repository
         run: |
           pwd
