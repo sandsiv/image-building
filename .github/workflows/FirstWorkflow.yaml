@@ -58,5 +58,6 @@ jobs:
       - name: List files in repository
         run: |
           pwd
+          ls -lat
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
